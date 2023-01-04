@@ -33,7 +33,7 @@ add_library(indicators INTERFACE)
 add_library(indicators::indicators ALIAS indicators)
 
 target_compile_features(indicators INTERFACE cxx_std_11)
-target_include_directories(indicators INTERFACE
+target_include_directories(indicators SYSTEM INTERFACE
   $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
   $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/include>)
 target_link_libraries(indicators INTERFACE Threads::Threads)
